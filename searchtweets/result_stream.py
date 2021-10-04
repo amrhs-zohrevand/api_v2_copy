@@ -362,7 +362,7 @@ class ResultStream:
 
             if self.next_token and self.total_results < self.max_tweets and self.n_requests <= self.max_requests:
                 self.request_parameters = merge_dicts(self.request_parameters,
-                                                      {"next_token": self.next_token})
+                                                      {"pagination_token": self.next_token})
                 logger.info("paging; total requests read so far: {}"
                             .format(self.n_requests))
 
